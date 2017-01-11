@@ -71,7 +71,7 @@ public class JavaAgentIT {
             // Wait for application to start
             app.getInputStream().read();
 
-            InputStream stream = new URL("http://localhost:" + port + "/metrics").openStream();
+            InputStream stream = new URL("http://localhost:" + port + "/debug/metrics").openStream();
             BufferedReader contents = new BufferedReader(new InputStreamReader(stream));
             boolean found = false;
             while (!found) {

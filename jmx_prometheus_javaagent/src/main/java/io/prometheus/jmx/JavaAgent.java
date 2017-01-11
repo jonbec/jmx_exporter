@@ -42,7 +42,7 @@ public class JavaAgent {
      pool.setDaemon(true);
      server.setThreadPool(pool);
      ServletContextHandler context = new ServletContextHandler();
-     context.setContextPath("/");
+     context.setContextPath("/debug");
      server.setHandler(context);
      context.addServlet(new ServletHolder(new MetricsServlet()), "/metrics");
      server.start();
